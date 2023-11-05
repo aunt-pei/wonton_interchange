@@ -1,0 +1,1 @@
+find ./src -type f -exec echo {} \; | sed "s/.\/src.\(.*\)\.ts/export \* from \'.\/\1\';/" | sort > ./src/index.ts;
